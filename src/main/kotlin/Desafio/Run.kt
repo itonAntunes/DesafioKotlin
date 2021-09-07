@@ -1,4 +1,4 @@
-package `Parte A`
+package Desafio
 
 fun main() {
     var aluno1 = Aluno("Everton", "Antunes", 1)

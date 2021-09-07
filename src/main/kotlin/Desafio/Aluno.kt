@@ -1,9 +1,7 @@
-package `Parte A`
-
-import javax.print.attribute.standard.MediaSize
+package Desafio
 
 // Criação da classe aluno
-class Aluno(var nome: String, var sobrenome: String, var codigoDoAluno: Int) {
+class Aluno(nome: String, sobrenome: String, codigoDoAluno: Int) {
     companion object {
         val codigoAlunoCriado = mutableListOf<Int>()
     }
