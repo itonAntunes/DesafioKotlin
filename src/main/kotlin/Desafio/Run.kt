@@ -16,5 +16,8 @@ fun main() {
 
     // criação das variaveis utilizadas na Classe Professor
 
-    var
+    var professor1 = ProfessorTitular("Roberto","Carlos",2,1,"Mecânica")
+    var professor2 = ProfessorAdjunto("Ricardo","Muniz",1,2,20)
+    var professor3 = ProfessorTitular("Marcia","Santos",2,3,"Costura")
+    var professor4 = ProfessorTitular("Jorge","Pereira",10,4,"Elétrica")
 }
