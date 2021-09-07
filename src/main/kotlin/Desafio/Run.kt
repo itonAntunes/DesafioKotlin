@@ -1,23 +1,54 @@
 package Desafio
 
 fun main() {
-    // criação das variaveis utilizadas na classe Aluno
+    // alunos sendo cadastrados
     var aluno1 = Aluno("Everton", "Antunes", 1)
     var aluno2 = Aluno("Everton", "Antunes", 2)
     var aluno3 = Aluno("Maria", "Oliveira", 3)
     var aluno4 = Aluno("João", "Cardoso", 4)
+    var aluno5 = Aluno("Jhon", "Snow", 5)
 
-    // criação das variaveis utilizadas na classe Curso
+    // lista dos alunos matriculados nos cursos
+    var listaAlunoMecanica = mutableListOf<Aluno>()
+    listaAlunoMecanica.add(aluno1)
+    listaAlunoMecanica.add(aluno2)
+    listaAlunoMecanica.add(aluno3)
+    listaAlunoMecanica.add(aluno4)
 
-    var curso1 = Curso("Mecânica", 1)
-    var curso2 = Curso("Elétrica", 2)
-    var curso3 = Curso("Hidráulica", 3)
-    var curso4 = Curso("Costura", 4)
 
-    // criação das variaveis utilizadas na Classe Professor
+    // lista dos alunos matriculados nos cursos
+    var listaAlunosEletrica = mutableListOf<Aluno>()
+    listaAlunosEletrica.add(aluno1)
+    listaAlunosEletrica.add(aluno2)
+    listaAlunosEletrica.add(aluno3)
+    listaAlunosEletrica.add(aluno4)
 
-    var professor1 = ProfessorTitular("Roberto","Carlos",2,1,"Mecânica")
-    var professor2 = ProfessorAdjunto("Ricardo","Muniz",1,2,20)
-    var professor3 = ProfessorTitular("Marcia","Santos",2,3,"Costura")
-    var professor4 = ProfessorTitular("Jorge","Pereira",10,4,"Elétrica")
+
+    // lista dos alunos matriculados nos cursos
+    var listaAlunosHidraulica = mutableListOf<Aluno>()
+    listaAlunosHidraulica.add(aluno1)
+    listaAlunosHidraulica.add(aluno2)
+    listaAlunosHidraulica.add(aluno3)
+    listaAlunosHidraulica.add(aluno4)
+    //listaAlunosHidraulica.add(aluno5)
+
+
+    // professores sendo cadastrados
+    var professorTitular1 = ProfessorTitular("Roberto", "Carlos", 2, 1, "Mecânica")
+    var professorTitular2 = ProfessorTitular("Jorge", "Pereira", 10, 3, "Elétrica")
+    var professorTitular3 = ProfessorTitular("Marcia", "Santos", 2, 2, "Hidráulica")
+
+
+    // professores sendo cadastrados
+    var professorAdjunto1 = ProfessorAdjunto("Ricardo", "Muniz", 1, 4, 30)
+    var professorAdjunto2 = ProfessorAdjunto("Richard", "Munhoz", 1, 5, 20)
+    var professorAdjunto3 = ProfessorAdjunto("Roberto", "Oliveira", 1, 6, 10)
+
+
+    // criação dos cursos com professores adicionados e alunos matriculados
+    var curso1 = Curso("Mecânica", 1, professorTitular1, professorAdjunto1, 4, listaAlunoMecanica)
+    var curso2 = Curso("Elétrica", 2, professorTitular2, professorAdjunto2, 4, listaAlunosEletrica)
+    var curso3 = Curso("Hidráulica", 3, professorTitular3, professorAdjunto3, 4, listaAlunosHidraulica)
+
+
 }

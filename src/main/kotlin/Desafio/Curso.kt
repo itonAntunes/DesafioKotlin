@@ -1,11 +1,21 @@
 package Desafio
 
-class Curso(nome: String, codigoCurso: Int) {
+import java.util.*
+
+class Curso(
+    nome: String,
+    codigoCurso: Int,
+    professorTitular: ProfessorTitular,
+    professorAdjunto: ProfessorAdjunto,
+    qtdMaximaAlunos: Int,
+    var listaAlunosMatriculados: MutableList<Aluno>
+) {
     companion object {
         val codigoCursoCriado = mutableListOf<Int>()
     }
 
     init {
+        // validação da ID do curso
         if (codigoCursoCriado.contains(codigoCurso)) {
             println("Curso de $nome cadastrado com ID:$codigoCurso já utilizado!")
             println("__________________________________")
@@ -13,6 +23,11 @@ class Curso(nome: String, codigoCurso: Int) {
             codigoCursoCriado.add(codigoCurso)
             println("Novo curso de: $nome Cadastrado")
         }
-        println("  ")
+        if (qtdMaximaAlunos >= listaAlunosMatriculados.size) {
+            println("${listaAlunosMatriculados.size} Alunos Matriculados")
+            println(" ")
+        } else {
+            println("Curso de $nome cheio, nao pode ser adicionado mais alunos.")
+        }
     }
 }
