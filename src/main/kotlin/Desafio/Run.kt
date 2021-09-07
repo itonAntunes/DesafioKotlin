@@ -55,7 +55,7 @@ fun main() {
     var cursoHidraulica1 = Curso("Hidráulica", 3, professorTitular3, professorAdjunto3, 4, listaAlunosHidraulica)
 
     var matriculaMecanica1 = Matricula(aluno1,cursoMecanica1,dataMatricula)
-    var matriculaEletrica1 = Matricula(aluno2,cursoEletrica1,dataMatricula)
+    var matriculaEletrica1 = Matricula(aluno4,cursoEletrica1,dataMatricula)
     var matriculaHidraulica1 = Matricula(aluno3,cursoHidraulica1,dataMatricula)
 
 
