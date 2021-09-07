@@ -1,11 +1,12 @@
 package Desafio
 
-class Curso (nome: String, codigoCurso: Int){
-    companion object{
+class Curso(nome: String, codigoCurso: Int) {
+    companion object {
         val codigoCursoCriado = mutableListOf<Int>()
     }
+
     init {
-        if (codigoCursoCriado.contains(codigoCurso)){
+        if (codigoCursoCriado.contains(codigoCurso)) {
             println("Curso de $nome cadastrado com ID:$codigoCurso já utilizado!")
             println("__________________________________")
         } else {
@@ -13,7 +14,5 @@ class Curso (nome: String, codigoCurso: Int){
             println("Novo curso de: $nome Cadastrado")
         }
         println("  ")
-
     }
-
 }
