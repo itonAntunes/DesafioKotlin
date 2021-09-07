@@ -7,11 +7,12 @@ class Aluno(nome: String, sobrenome: String, codigoDoAluno: Int) {
     }
     init {
         if (codigoAlunoCriado.contains(codigoDoAluno)) {
-            println("Aluno: $nome $sobrenome com ID ${codigoDoAluno} já cadastrado !!")
+            println("Aluno: $nome $sobrenome com ID:${codigoDoAluno} já cadastrado !!")
+            println("__________________________________")
         } else {
             codigoAlunoCriado.add(codigoDoAluno)
             println("Novo aluno $nome $sobrenome !!")
         }
-        println(" ")
+        println("  ")
     }
 }
