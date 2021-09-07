@@ -1,7 +1,7 @@
 package Desafio
 
 // Criação da classe aluno
-class Aluno(nome: String, sobrenome: String, codigoDoAluno: Int) {
+class Aluno(var  nome: String, var sobrenome: String, var codigoDoAluno: Int) {
     companion object {
         val codigoAlunoCriado = mutableListOf<Int>()
     }

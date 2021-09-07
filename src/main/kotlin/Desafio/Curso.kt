@@ -3,11 +3,11 @@ package Desafio
 import java.util.*
 
 class Curso(
-    nome: String,
-    codigoCurso: Int,
+    var nome: String,
+    var codigoCurso: Int,
     professorTitular: ProfessorTitular,
     professorAdjunto: ProfessorAdjunto,
-    qtdMaximaAlunos: Int,
+    var qtdMaximaAlunos: Int,
     var listaAlunosMatriculados: MutableList<Aluno>
 ) {
     companion object {

@@ -1,6 +1,6 @@
 package Desafio
 
-open class Professor(nome: String, sobrenome: String, tempoDeCasa: Int, codigoDoProfessor: Int) {
+open class Professor(var nome: String, var sobrenome: String, var tempoDeCasa: Int, var codigoDoProfessor: Int) {
     companion object {
         var codigoDoProfessorCriado = mutableListOf<Int>()
     }

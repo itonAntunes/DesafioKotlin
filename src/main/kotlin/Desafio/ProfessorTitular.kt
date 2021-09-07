@@ -5,7 +5,7 @@ class ProfessorTitular(
     sobrenome: String,
     tempoDeCasa: Int,
     codigoProfessor: Int,
-    especialidade: String
+    var especialidade: String
 ) : Professor(nome, sobrenome, tempoDeCasa, codigoProfessor) {
     init {
         println("$nome professor Titular de: $especialidade ")

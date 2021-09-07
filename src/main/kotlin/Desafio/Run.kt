@@ -1,6 +1,10 @@
 package Desafio
 
+import java.util.*
+
 fun main() {
+
+    var dataMatricula = Date()
     // alunos sendo cadastrados
     var aluno1 = Aluno("Everton", "Antunes", 1)
     var aluno2 = Aluno("Everton", "Antunes", 2)
@@ -35,8 +39,8 @@ fun main() {
 
     // professores sendo cadastrados
     var professorTitular1 = ProfessorTitular("Roberto", "Carlos", 2, 1, "Mecânica")
-    var professorTitular2 = ProfessorTitular("Jorge", "Pereira", 10, 3, "Elétrica")
-    var professorTitular3 = ProfessorTitular("Marcia", "Santos", 2, 2, "Hidráulica")
+    var professorTitular2 = ProfessorTitular("Jorge", "Pereira", 10, 2, "Elétrica")
+    var professorTitular3 = ProfessorTitular("Marcia", "Santos", 2, 3, "Hidráulica")
 
 
     // professores sendo cadastrados
@@ -46,9 +50,13 @@ fun main() {
 
 
     // criação dos cursos com professores adicionados e alunos matriculados
-    var curso1 = Curso("Mecânica", 1, professorTitular1, professorAdjunto1, 4, listaAlunoMecanica)
-    var curso2 = Curso("Elétrica", 2, professorTitular2, professorAdjunto2, 4, listaAlunosEletrica)
-    var curso3 = Curso("Hidráulica", 3, professorTitular3, professorAdjunto3, 4, listaAlunosHidraulica)
+    var cursoMecanica1 = Curso("Mecânica", 1, professorTitular1, professorAdjunto1, 4, listaAlunoMecanica)
+    var cursoEletrica1 = Curso("Elétrica", 2, professorTitular2, professorAdjunto2, 4, listaAlunosEletrica)
+    var cursoHidraulica1 = Curso("Hidráulica", 3, professorTitular3, professorAdjunto3, 4, listaAlunosHidraulica)
+
+    var matriculaMecanica1 = Matricula(aluno1,cursoMecanica1,dataMatricula)
+    var matriculaEletrica1 = Matricula(aluno2,cursoEletrica1,dataMatricula)
+    var matriculaHidraulica1 = Matricula(aluno3,cursoHidraulica1,dataMatricula)
 
 
 }
