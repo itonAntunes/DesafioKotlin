@@ -1,18 +1,8 @@
 package Desafio
 
-open class Professor(var nome: String, var sobrenome: String, var tempoDeCasa: Int, var codigoDoProfessor: Int) {
-    companion object {
-        var codigoDoProfessorCriado = mutableListOf<Int>()
-    }
+open class Professor(var nome: String, var sobrenome: String, var codigoDoProfessor: Int) {
+    var tempoDeCasa: Int = 0
 
-    init {
-        // validação da ID do professor
-        if (codigoDoProfessorCriado.contains(codigoDoProfessor)) {
-            println("$nome $sobrenome foi cadastrado com ID de professor:$codigoDoProfessor já utilizado ! ")
-            println("__________________________________")
-        } else {
-            codigoDoProfessorCriado.add(codigoDoProfessor)
-            println("Professor $nome $sobrenome cadastrado com sucesso!!")
-        }
-    }
+    override fun equals(other: Any?) : Boolean = (other is Professor && this.codigoDoProfessor == other.codigoDoProfessor)
+
 }
